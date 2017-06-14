@@ -2,6 +2,8 @@ package sf.hackday.farmtotable.voicepump;
 
 import edu.cmu.sphinx.api.Configuration;
 import edu.cmu.sphinx.api.LiveSpeechRecognizer;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -9,7 +11,10 @@ import org.springframework.context.annotation.Bean;
 import java.io.IOException;
 
 @SpringBootApplication
-public class Application {
+public class Application implements CommandLineRunner {
+
+    @Autowired
+    private SpeechPoster poster;
 
     @Bean
     public Configuration getConfiguration() {
@@ -30,5 +35,10 @@ public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+    }
+
+    @Override
+    public void run(String... strings) throws Exception {
+        poster.start();
     }
 }

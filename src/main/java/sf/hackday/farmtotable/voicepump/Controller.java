@@ -33,7 +33,6 @@ public class Controller {
     @RequestMapping("/start")
     public String start() {
        recognizer.startRecognition(cache);
-       cache = false;
        StringBuffer buf = new StringBuffer();
        for(int i = 0; i < 2; i++) {
            SpeechResult result = recognizer.getResult();
@@ -51,7 +50,7 @@ public class Controller {
         HttpEntity<String> result = new HttpEntity<>(resultString);
 
         RestTemplate restTemplate = new RestTemplate();
-        restTemplate.postForLocation("http://localhost:8080/data", result);
+        restTemplate.postForLocation("http://192.168.1.102:8090/message", result);
     }
 
     @RequestMapping("/pause")
