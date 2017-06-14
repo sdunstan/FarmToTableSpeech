@@ -21,8 +21,8 @@ public class Application implements CommandLineRunner {
         Configuration config = new Configuration();
 
         config.setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
-        config.setDictionaryPath("classpath:5382.dic");
-        config.setLanguageModelPath("classpath:5382.lm");
+        config.setDictionaryPath("classpath:8691.dic");
+        config.setLanguageModelPath("classpath:8691.lm");
         //config.setGrammarName("classpath:commands.gram");
         //config.setUseGrammar(true);
         // config.setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
