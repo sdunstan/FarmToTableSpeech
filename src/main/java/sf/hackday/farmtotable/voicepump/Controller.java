@@ -13,9 +13,6 @@ public class Controller {
     @Autowired
     private LiveSpeechRecognizer recognizer;
 
-    @Autowired
-    private RabbitTemplate rabbitTemplate;
-
     private boolean cache = false;
 
     @RequestMapping("/")
@@ -33,8 +30,6 @@ public class Controller {
            buf.append(result.getHypothesis()).append(" ");
        }
        recognizer.stopRecognition();
-
-       rabbitTemplate.convertAndSend("SPEECH-QUEUE", buf.toString());
 
        return buf.toString();
     }
