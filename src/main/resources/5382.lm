@@ -1,0 +1,85 @@
+Language model created by QuickLM on Wed Jun 14 14:53:08 EDT 2017
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 15 sentences and 17 words
+
+\data\
+ngram 1=17
+ngram 2=30
+ngram 3=15
+
+\1-grams:
+-0.7782 </s> -0.3010
+-0.7782 <s> -0.2218
+-1.9542 A -0.2218
+-1.9542 DAMMIT -0.2218
+-1.9542 DAMNIT -0.2218
+-1.9542 GIVE -0.2218
+-1.9542 I -0.2218
+-1.9542 ME -0.2218
+-1.9542 MEETING -0.2218
+-1.9542 NEED -0.2218
+-1.9542 PLEASE -0.2218
+-1.9542 SCHEDULE -0.2218
+-1.9542 SCHEDULED -0.2218
+-1.9542 TO -0.2218
+-1.9542 WANT -0.2218
+-1.9542 WANTED -0.2218
+-1.9542 YO -0.2218
+
+\2-grams:
+-1.4771 <s> A 0.0000
+-1.4771 <s> DAMMIT 0.0000
+-1.4771 <s> DAMNIT 0.0000
+-1.4771 <s> GIVE 0.0000
+-1.4771 <s> I 0.0000
+-1.4771 <s> ME 0.0000
+-1.4771 <s> MEETING 0.0000
+-1.4771 <s> NEED 0.0000
+-1.4771 <s> PLEASE 0.0000
+-1.4771 <s> SCHEDULE 0.0000
+-1.4771 <s> SCHEDULED 0.0000
+-1.4771 <s> TO 0.0000
+-1.4771 <s> WANT 0.0000
+-1.4771 <s> WANTED 0.0000
+-1.4771 <s> YO 0.0000
+-0.3010 A </s> -0.3010
+-0.3010 DAMMIT </s> -0.3010
+-0.3010 DAMNIT </s> -0.3010
+-0.3010 GIVE </s> -0.3010
+-0.3010 I </s> -0.3010
+-0.3010 ME </s> -0.3010
+-0.3010 MEETING </s> -0.3010
+-0.3010 NEED </s> -0.3010
+-0.3010 PLEASE </s> -0.3010
+-0.3010 SCHEDULE </s> -0.3010
+-0.3010 SCHEDULED </s> -0.3010
+-0.3010 TO </s> -0.3010
+-0.3010 WANT </s> -0.3010
+-0.3010 WANTED </s> -0.3010
+-0.3010 YO </s> -0.3010
+
+\3-grams:
+-0.3010 <s> A </s>
+-0.3010 <s> DAMMIT </s>
+-0.3010 <s> DAMNIT </s>
+-0.3010 <s> GIVE </s>
+-0.3010 <s> I </s>
+-0.3010 <s> ME </s>
+-0.3010 <s> MEETING </s>
+-0.3010 <s> NEED </s>
+-0.3010 <s> PLEASE </s>
+-0.3010 <s> SCHEDULE </s>
+-0.3010 <s> SCHEDULED </s>
+-0.3010 <s> TO </s>
+-0.3010 <s> WANT </s>
+-0.3010 <s> WANTED </s>
+-0.3010 <s> YO </s>
+
+\end\

@@ -14,15 +14,19 @@ import java.io.IOException;
 public class Application implements CommandLineRunner {
 
     @Autowired
-    private SpeechPoster poster;
+    private SpeechCollector poster;
 
     @Bean
     public Configuration getConfiguration() {
         Configuration config = new Configuration();
 
         config.setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
-        config.setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
-        config.setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
+        config.setDictionaryPath("classpath:5382.dic");
+        config.setLanguageModelPath("classpath:5382.lm");
+        //config.setGrammarName("classpath:commands.gram");
+        //config.setUseGrammar(true);
+        // config.setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
+        //config.setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
 
         return config;
     }
@@ -41,4 +45,5 @@ public class Application implements CommandLineRunner {
     public void run(String... strings) throws Exception {
         poster.start();
     }
+
 }

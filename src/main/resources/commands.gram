@@ -1,0 +1,31 @@
+#JSGF V1.0;
+
+grammar dialog;
+
+<digit> = oh    |
+          zero  |
+          one   |
+          two   |
+          three |
+          four  |
+          five  |
+          six   |
+          seven |
+          eight |
+          nine  ;
+
+<number> = <digit>+ [point <digit>+];
+
+<menu_command> =  digits                     |
+                  [go to [the]] bank account |
+                  weather forecast           |
+                  exit [[the] program]       ;
+
+<bank_command> = [show | check] balance |
+                 deposit <number>       |
+                 withdraw <number>      |
+                 back                   ;
+
+<calendar_command> = [please] [schedule | create | make] a [calendar | meeting];
+
+public <command> = <calendar_command> | <bank_command>;
