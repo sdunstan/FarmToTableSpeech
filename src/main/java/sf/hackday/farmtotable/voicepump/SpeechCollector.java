@@ -18,7 +18,7 @@ public class SpeechCollector {
         while (true) {
             try {
                 String result = recognizer.getResult().getHypothesis();
-                if(result != null && result.length() > 18) {
+                if(result != null && result.length() > 12) {
                     System.out.println("SENDING: " + result);
                 }
                 //recognizer.stopRecognition();
