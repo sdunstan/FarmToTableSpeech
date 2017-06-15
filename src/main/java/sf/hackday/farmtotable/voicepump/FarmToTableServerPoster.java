@@ -14,7 +14,7 @@ public class FarmToTableServerPoster {
             System.out.println("Sending " + resultString);
             HttpEntity<String> result = new HttpEntity<>(resultString);
             RestTemplate restTemplate = new RestTemplate();
-            restTemplate.postForLocation("http://192.168.1.102:8090/message", result);
+            restTemplate.postForLocation("http://localhost:8090/message", result);
         }
     }
 }
