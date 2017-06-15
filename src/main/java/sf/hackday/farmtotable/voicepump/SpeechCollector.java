@@ -19,7 +19,7 @@ public class SpeechCollector {
             try {
                 String result = recognizer.getResult().getHypothesis();
                 if(result != null && result.length() > 12) {
-                    System.out.println("SENDING: " + result);
+                    poster.sendPost(result);
                 }
                 //recognizer.stopRecognition();
                 //recognizer.startRecognition(true);
