@@ -16,7 +16,7 @@ grammar dialog;
 
 <number> = <digit>+ [point <digit>+];
 
-<calendar_command> = [please] [schedule | create | make] a meeting;
+<calendar_command> = [please] [schedule | create | make] a meeting [for next week];
 <sports_command> = how about those [suns | diamondbacks | coyotes | cardinals];
 <google_command> = [what | why | how] [is | do] [the] [capital of arizona | birds fly | old is beyonce];
 
