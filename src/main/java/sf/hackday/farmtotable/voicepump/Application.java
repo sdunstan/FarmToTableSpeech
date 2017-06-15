@@ -21,12 +21,13 @@ public class Application implements CommandLineRunner {
         Configuration config = new Configuration();
 
         config.setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
-        config.setDictionaryPath("classpath:8691.dic");
-        config.setLanguageModelPath("classpath:8691.lm");
-        //config.setGrammarName("classpath:commands.gram");
-        //config.setUseGrammar(true);
-        // config.setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
-        //config.setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
+//        config.setDictionaryPath("classpath:8691.dic");
+//        config.setLanguageModelPath("classpath:8691.lm");
+        config.setGrammarPath("classpath:/grammar");
+        config.setGrammarName("dialog");
+        config.setUseGrammar(true);
+         config.setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
+        config.setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
 
         return config;
     }

@@ -1,0 +1,23 @@
+#JSGF V1.0;
+
+grammar dialog;
+
+<digit> = oh    |
+          zero  |
+          one   |
+          two   |
+          three |
+          four  |
+          five  |
+          six   |
+          seven |
+          eight |
+          nine  ;
+
+<number> = <digit>+ [point <digit>+];
+
+<calendar_command> = [please] [schedule | create | make] a meeting;
+<sports_command> = how about those [suns | diamondbacks | coyotes | cardinals];
+<google_command> = [what | why | how] [is | do] [the] [capital of arizona | birds fly | old is beyonce];
+
+public <command> = <calendar_command> | <sports_command> | <google_command>;
